@@ -1,11 +1,11 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 venue: "Chicago BSD"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-latitude: "45"     # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"    # decimal longitude of the workshop venue (use https://www.latlong.net)
+address: "Room 101 Harold Leonard Stuart Hall, 5835 S. Greenwood Ave, Chicago IL"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "USA"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+latitude: "41.788353"     # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-87.598840"    # decimal longitude of the workshop venue (use https://www.latlong.net)
 humandate: "Jan 11-12, 2020"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "8:30 am  - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2020-01-11      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
@@ -23,14 +23,14 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% comment %}
 For a workshop please delete the following block
 {% endcomment %}
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to customize your
-own website. If you are running a self-organized workshop or have not put in a
-workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know
-about your workshop and our administrator may contact you if we need any extra
-information.
-</div>
+<!-- <div class="alert alert-danger"> -->
+<!-- This is the workshop template. Delete these lines and use it to customize your -->
+<!-- own website. If you are running a self-organized workshop or have not put in a -->
+<!-- workshop request yet, please also fill in  -->
+<!-- <a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know -->
+<!-- about your workshop and our administrator may contact you if we need any extra -->
+<!-- information. -->
+<!-- </div> -->
 
 {% comment %}
 Check DC curriculum
@@ -259,9 +259,9 @@ please preview your site before committing, and make sure to run
 {% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
 
-{% if site.carpentry == "swc" %}
+{% if site.carpentry == "swc" and site.curriculum != "dc-genomics" %}
 {% include swc/syllabus.html %}
-{% elsif site.carpentry == "dc" %}
+{% elsif site.carpentry == "dc" or site.curriculum == "dc-genomics" %}
 {% include dc/syllabus.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/syllabus.html %}
